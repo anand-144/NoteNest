@@ -1,16 +1,137 @@
-# React + Vite
+# 📗 NoteNest – Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, clean, fast note-taking web application inspired by Evernote.
+Built with React + Vite + Tailwind CSS + Framer Motion, featuring:
 
-Currently, two official plugins are available:
+📝 Create, edit, and delete notes
+⭐ Star / favorite notes
+🔍 Instant search
+📁 Category filtering
+💾 Auto-save with localStorage
+⚡ Smooth animations
+📱 Mobile responsive UI
+🎨 Clean UI and modular folder structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 🚀 Live Demo
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 📦 Tech Stack
+| Layer             | Technology                      |
+| ----------------- | ------------------------------- |
+| Frontend          | React, Vite, Tailwind CSS       |
+| Icons             | lucide-react                    |
+| Animations        | Framer Motion                   |
+| State Persistence | Custom `useLocalStorage` hook   |
+| Deployment        | Vercel / Netlify / GitHub Pages |
 
-## Expanding the ESLint configuration
+# 📁 Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+evernote-clone/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── editor/
+│   │   │   ├── Editor.jsx
+│   │   │   ├── EditorHeader.jsx
+│   │   │   ├── EditorContent.jsx
+│   │   │   └── index.js
+│   │   │
+│   │   ├── modal/
+│   │   │   ├── DeleteConfirmModal.jsx
+│   │   │   └── index.js
+│   │   │
+│   │   ├── notes/
+│   │   │   ├── NoteCard.jsx
+│   │   │   ├── NotesList.jsx
+│   │   │   └── index.js
+│   │   │
+│   │   ├── sidebar/
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── CategoryItem.jsx
+│   │   │   └── index.js
+│   │
+│   ├── constants/
+│   │   ├── categories.js
+│   │   ├── initialNotes.js
+│   │   └── index.js
+│   │
+│   ├── hooks/
+│   │   └── useLocalStorage.js
+│   │
+│   │
+│   │
+│   ├── utils/
+│   │   ├── formatDate.js
+│   │   ├── filterNotes.js
+│   │   ├── handleDuplicateTitle.js
+│   │   └── index.js
+│   │
+│   └── main.jsx
+│
+├── .gitignore
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+
+# ⚙️ Installation & Setup
+1️⃣ Clone the repository
+https://github.com/anand-144/NoteNest
+cd evernote-clone
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the development server
+npm run dev
+
+Now open:
+http://localhost:5173
+
+# 🛠 Available Scripts
+| Script            | Description                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Runs development server           |
+| `npm run build`   | Builds the app for production     |
+| `npm run preview` | Previews production build locally |
+
+
+# 🚀 Deployment Guide
+# ✅ Vercel (recommended)
+
+Push project to GitHub
+Go to https://vercel.com
+Click New Project
+Import your GitHub repo
+Vercel auto-detects Vite → click Deploy
+
+# Configure Build Settings (VERY IMPORTANT)
+
+Inside the Vercel UI:
+
+| Setting              | Value           |
+| -------------------- | --------------- |
+| **Framework Preset** | Vite            |
+| **Build Command**    | `npm run build` |
+| **Output Directory** | `dist`          |
+| **Install Command**  | `npm install`   |
+| **Node Version**     | 18 or 20        |
+
+# Click “Deploy”
+
+Wait 10–20 seconds…
+🎉 Your app is live!
+
+# 🤝 Contributing
+
+Contributions are welcome!
+Please open an issue or submit a pull request.
+
+# 📝 License
+
+MIT License — Free to use, modify, and distribute.
+
