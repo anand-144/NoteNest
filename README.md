@@ -13,6 +13,7 @@ Built with React + Vite + Tailwind CSS + Framer Motion, featuring:
 🎨 Clean UI and modular folder structure
 
 # 🚀 Live Demo
+https://note-nest-pi-drab.vercel.app/
 
 
 # 📦 Tech Stack
